@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+<div class="container py-5">
+  <div class="payment-card">
+    <div class="payment-header">Secure Payment</div>
+    <div class="total-amount">Total: <span class="text-primary">${totalprice}</span>
+    </div>
+
+    <!-- Card Icons -->
+    <div class="card-icons text-center mb-3">
+      <f:image src="/fileadmin/Payment/visa.png" width="45" height="29"></f:image>      
+        <f:image src="/fileadmin/Payment/mastercard.png" width="45" height="29"></f:image>
+        <f:image src="/fileadmin/Payment/Paypal.png" width="45" height="29"></f:image>
+    </div>
+
+    <form>
+      <!-- Name on Card -->
+      <div class="form-group">
+        <label for="nameOnCard">Name on Card</label>
+        <input type="text" class="form-control" id="nameOnCard" placeholder="John Doe" required>
+      </div>
+
+      <!-- Card Number -->
+      <div class="form-group">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+      </div>
+
+      <!-- Expiration & CVV -->
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="expiry">Expiry Date</label>
+          <input type="text" class="form-control" id="expiry" placeholder="MM/YY" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="cvv">CVV</label>
+          <input type="password" class="form-control" id="cvv" placeholder="123" required>
+        </div>
+      </div>
+
+      <!-- Billing Address -->
+      <div class="form-group">
+        <label for="billingAddress">Billing Address</label>
+        <input type="text" class="form-control" id="billingAddress" placeholder="123 Street Name, City" required>
+      </div>
+
+      <button type="submit" class="btn btn-success btn-block btn-pay">Pay Now</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

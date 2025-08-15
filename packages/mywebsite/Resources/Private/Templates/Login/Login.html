@@ -1,0 +1,116 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:flashMessages/>
+
+<f:if condition="{messageKey}">
+    <div class="alert alert-info text-center shadow-sm mb-4">
+        <h4 class="fw-bold mb-2">
+            <f:render partial="RenderLabelOrMessage" arguments="{key: '{messageKey}_header'}"/>
+        </h4>
+        <p class="mb-0">
+            <f:render partial="RenderLabelOrMessage" arguments="{key: '{messageKey}_message'}"/>
+        </p>
+    </div>
+</f:if>
+
+<div class="card shadow-lg p-4 mx-auto" style="max-width: 400px; border-radius: 1rem;">
+    <h3 class="text-center mb-4 text-primary">
+        <i class="bi bi-box-arrow-in-right me-2"></i> <f:translate key="login"/>
+    </h3>
+
+    <f:form target="_top" fieldNamePrefix="" action="login" requestToken="{requestToken}" spellcheck="false" class="needs-validation">
+        <f:render section="content" arguments="{_all}"/>
+    </f:form>
+
+    <f:if condition="{settings.showForgotPassword}">
+        <div class="text-center mt-3">
+            <f:link.action action="recovery" controller="PasswordRecovery" class="text-decoration-none">
+                <small class="text-muted">
+                    <i class="bi bi-key me-1"></i>
+                    <f:render partial="RenderLabelOrMessage" arguments="{key: 'forgot_header'}"/>
+                </small>
+            </f:link.action>
+        </div>
+    </f:if>
+</div>
+
+<f:section name="content">
+    <fieldset class="border-0 p-0">
+        <!-- Username -->
+        <div class="mb-3">
+            <label for="tx-felogin-input-username" class="form-label fw-semibold">
+                <i class="bi bi-person me-1"></i> <f:translate key="username"/>
+            </label>
+            <f:form.textfield 
+                name="user" 
+                required="true" 
+                autocomplete="username" 
+                id="tx-felogin-input-username" 
+                class="form-control form-control-lg shadow-sm"/>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+            <label for="tx-felogin-input-password" class="form-label fw-semibold">
+                <i class="bi bi-lock me-1"></i> <f:translate key="password"/>
+            </label>
+            <f:form.password 
+                name="pass" 
+                required="required" 
+                autocomplete="current-password" 
+                id="tx-felogin-input-password" 
+                class="form-control form-control-lg shadow-sm"/>
+        </div>
+
+        <!-- Remember me -->
+        <f:if condition="{permaloginStatus} > -1">
+            <div class="form-check mb-3">
+                <f:if condition="{permaloginStatus} == 1">
+                    <f:then>
+                        <f:form.hidden name="permalogin" value="0" disabled="disabled"/>
+                        <f:form.checkbox name="permalogin" id="permalogin" value="1" checked="checked" class="form-check-input"/>
+                    </f:then>
+                    <f:else>
+                        <f:form.hidden name="permalogin" value="0"/>
+                        <f:form.checkbox name="permalogin" id="permalogin" value="1" class="form-check-input"/>
+                    </f:else>
+                </f:if>
+                <label for="permalogin" class="form-check-label">
+                    <f:translate id="permalogin"/>
+                </label>
+            </div>
+        </f:if>
+
+        <!-- Submit -->
+        <div class="d-grid">
+            <f:form.submit 
+                value="{f:translate(key: 'login')}" 
+                name="submit" 
+                class="btn btn-primary btn-lg shadow-sm"/>
+        </div>
+               <div class="text-center mt-3">
+            <f:link.page pageUid="46" class="text-decoration-none">
+                <span class="fw-semibold">Register your account here</span>
+            </f:link.page>
+              </div>
+
+        <!-- Hidden Fields -->
+        <div class="felogin-hidden">
+            <f:form.hidden name="logintype" value="login"/>
+            <f:if condition="{redirectURL}!=''">
+                <f:form.hidden name="redirect_url" value="{redirectURL}" />
+            </f:if>
+            <f:if condition="{referer}!=''">
+                <f:form.hidden name="referer" value="{referer}" />
+            </f:if>
+            <f:if condition="{redirectReferrer}!=''">
+                <f:form.hidden name="redirectReferrer" value="off" />
+            </f:if>
+            <f:if condition="{noRedirect}!=''">
+                <f:form.hidden name="noredirect" value="1" />
+            </f:if>
+        </div>
+    </fieldset>
+   
+</f:section>
+</html>

@@ -1,0 +1,45 @@
+mod.web_layout.BackendLayouts {
+  Boxkey {
+    title = Boxkey Layout
+    config {
+      backend_layout {
+        colCount = 3
+        rowCount = 2
+        rows {
+          1 {
+            columns {
+              1 {
+                name = 1st
+                colPos = 20
+              }
+              2 {
+                name = 2nd
+                colPos = 21
+              }
+              3 {
+                name = 3rd
+                colPos = 22
+              }
+            }
+          }
+          2 {
+            columns {
+              1 {
+                name = 2nd row
+                colPos = 30
+              }
+              2 {
+                name = 31
+                colPos = 2
+              }
+              3 {
+                name = 32
+                colPos = 2
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

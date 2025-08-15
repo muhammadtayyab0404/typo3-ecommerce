@@ -1,0 +1,38 @@
+mod.web_layout.BackendLayouts {
+  Payment {
+    title = Payment Detail
+    icon = content-container-columns-2
+    config {
+      backend_layout {
+        colCount = 2
+        rowCount = 2
+        rows {
+          1 {
+            columns {
+              1 {
+                name = 0x0
+                colPos = 20
+              }
+              2 {
+                name = 1x0
+                colPos = 21
+              }
+            }
+          }
+          2 {
+            columns {
+              1 {
+                name = 0x1
+                colPos = 30
+              }
+              2 {
+                name = 1x1
+                colPos = 31
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

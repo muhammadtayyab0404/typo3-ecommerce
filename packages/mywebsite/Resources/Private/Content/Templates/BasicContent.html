@@ -1,0 +1,83 @@
+<html data-namespace-typo3-fluid="true"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+   
+
+
+
+   <div class="slider">
+    <f:for each="{slides}" as="slide">
+        <div class="slide">
+            <f:image image="{slide.image}" alt="{slide.caption}" />
+            <p>{slide.caption}</p>
+        </div>
+    </f:for>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="card-deck">
+      <f:if condition="{box1_img}">
+        <div class="card">
+          <f:for each="{box1_img}" as="image">
+            <f:image image="{image}" class="card-img-top" width="300" alt="Card image" />
+          </f:for>
+          <div class="card-body">
+            <p class="card-text">
+              {data.box1_text}
+            </p>
+          </div>
+        </div>
+      </f:if>
+
+      <f:if condition="{box2_img}">
+         <div class="card">
+           <f:for each="{box2_img}" as="image">
+             <f:image image="{image}" class="card-img-top" width="300" alt="Card image" />
+           </f:for>
+           <div class="card-body">
+             <p class="card-text">
+               {data.box2_text}
+             </p>
+           </div>
+         </div>
+       </f:if>
+
+       <f:if condition="{box3_img}">
+         <div class="card">
+           <f:for each="{box3_img}" as="image">
+             <f:image image="{image}" class="card-img-top" width="300" alt="Card image" />
+           </f:for>
+           <div class="card-body">
+             <p class="card-text">
+               {data.box3_text}
+             </p>
+           </div>
+         </div>
+       </f:if>
+
+       <f:if condition="{box4_img}">
+         <div class="card">
+           <f:for each="{box4_img}" as="image">
+             <f:image image="{image}" class="card-img-top" width="300" alt="Card image" />
+           </f:for>
+           <div class="card-body">
+             <p class="card-text">
+               {data.box4_text}
+             </p>
+           </div>
+         </div>
+       </f:if>
+
+    </div>
+    <br>
+    <br>
+    

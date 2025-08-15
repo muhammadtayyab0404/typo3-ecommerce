@@ -1,0 +1,51 @@
+
+
+<section style="background-color: #eee;">
+  <div class="text-center container py-5">
+    <h4 class="mt-4 mb-5"><strong>Bestsellers</strong></h4>
+
+
+
+    <div class="row">
+      <f:for each="{msg}" as="msg">
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card">
+
+
+        <f:if condition="{msg.image}">       
+          <div class="bg-image hover-zoom ripple"  data-mdb-ripple-color="light">
+           <f:link.page pageUid="34" class="text-reset" additionalParams="{Products : msg.uid}" >
+             <f:image image="{msg.image.0}" width="348" height="" class="w-100"  >  
+           </f:image>
+           </f:link.page>
+              <div class="mask">
+                <div class="d-flex justify-content-start align-items-end h-100">
+                  <h5>
+                    <span class="badge bg-success ms-2">Eco</span><span
+                      class="badge bg-danger ms-2">-10%</span>
+                  </h5>
+                </div>
+              </div>
+              <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+             </f:if>
+
+          </div>
+          <div class="card-body">
+            <f:link.page pageUid="34" class="text-reset" additionalParams="{Products : msg.uid}" >
+              <h5 class="card-title mb-3">{msg.name}</h5>
+            </f:link.page>
+            <a href="" class="text-reset">
+              <p>{msg.category}</p>
+            </a>
+            <h6 class="mb-3">
+              <s>$61.99</s><strong class="ms-2 text-danger">${msg.price}</strong>
+            </h6>
+          </div>
+        </div>
+         </div>
+          </f:for>
+      </div>
+        </div>
+</section>

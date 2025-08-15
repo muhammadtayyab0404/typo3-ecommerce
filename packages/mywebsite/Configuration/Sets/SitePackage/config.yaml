@@ -1,0 +1,5 @@
+name: malik/mywebsite
+label: 'MyWebsite'
+dependencies:
+  - georgringer/news
+  

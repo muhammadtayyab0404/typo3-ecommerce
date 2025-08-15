@@ -1,0 +1,141 @@
+@import './TypoScript/'
+@import './TypoScript/CustomContentElements'
+
+
+
+plugin.tx_news {
+
+	view {
+		templateRootPaths {
+			500 = EXT:mywebsite/Resources/Private/News/Template
+		}
+
+		partialRootPaths {
+			500 = EXT:mywebsite/Resources/Private/News/Partials
+		}
+
+		layoutRootPaths {
+			500 = EXT:mywebsite/Resources/Private/News/Layouts
+		}
+	}
+}
+
+plugin.tx_mywebsite_boxplugin{
+	view{
+		templateRootPaths{
+			0 = EXT:mywebsite/Resources/Private/Content/Templates/
+		}
+				Partials{
+			0 = EXT:mywebsite/Resources/Private/Content/Parials/
+		}
+				layoutRootPaths{
+			0 = EXT:mywebsite/Resources/Private/Content/Layouts/
+		}
+	}
+}
+
+plugin.tx_mywebsite_products{
+
+	view{
+
+		templateRootPaths{
+			0 = EXT:mywebsite/Resources/Private/Products/Templates/
+		}
+		Parials{
+			0 = EXT:mywebsite/Resources/Private/Products/Partials/
+		}
+		layoutRootPaths{
+			0 = EXT:mywebsite/Resources/Private/Products/Layouts/
+
+		}
+	}
+}
+
+plugin.tx_mywebsite_payment{
+
+		view{
+
+		templateRootPaths{
+			0 = EXT:mywebsite/Resources/Private/Templates/
+		}
+		Parials{
+			0 = EXT:mywebsite/Resources/Private/Partials/
+		}
+		layoutRootPaths{
+			0 = EXT:mywebsite/Resources/Private/Layouts/
+
+		}
+	}
+
+
+}
+plugin.tx_sfregister {
+    view {
+        templateRootPaths {
+            99 = EXT:mywebsite/Resources/Private/Templates/
+        }
+        partialRootPaths {
+           99 = EXT:mywebsite/Resources/Private/Partials/
+        }
+        layoutRootPaths {
+            99 = EXT:mywebsite/Resources/Private/Layouts/
+        }
+    }
+}
+
+plugin.tx_felogin_login{
+ view{
+
+	templateRootPaths{
+
+		99 = EXT:mywebsite/Resources/Private/Templates/
+	}
+	partialRootPaths{
+		99= EXT:mywebsite/Resources/Private/Partials/
+	}
+	layoutRootPaths{
+		99= EXT:mywebsite/Resources/Private/Layouts/
+	}
+ }
+
+
+
+}
+
+lib.renderRecord =RECORDS
+lib.renderRecord {
+	source =26
+	tables= tt_content
+}
+
+
+lib.rendergroup = CONTENT
+lib.rendergroup{
+	table = tt_content
+	select {
+		pidInList =this
+		orderBy = sorting
+		where = CType = 'list' = 'news_pi1'
+	}
+}
+lib.dynamicContent = CONTENT
+lib.dynamicContent{
+	table = tt_content
+	select{
+		pidInList = 13
+		orderBy = sorting
+		where= colPos = 20
+	}
+} 
+
+lib.producttt = CONTENT
+lib.producttt {
+	table =tt_content
+	select{
+		pidInList =this
+		orderBy = sorting
+		where =colPos = 20
+	}
+}
+
+

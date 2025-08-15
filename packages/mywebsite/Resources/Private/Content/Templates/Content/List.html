@@ -1,0 +1,25 @@
+<div class="container mt-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <f:for each="{msg}" as="msg">
+            <div class="col">
+                <div class="card h-100">
+                    
+                    <f:if condition="{msg.boximg}">
+                        <f:image image="{msg.boximg}" class="card-img-top img-fluid" alt="Image" />
+                    </f:if>
+
+                    <div class="card-body">
+                      <h2 class="card-title pricing-card-title">{msg.boxtitle}</h2>
+                        <p class="card-text">{msg.boxtext}</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </f:for>
+    </div>
+</div>
+<br>
+<br>
+<br>
+

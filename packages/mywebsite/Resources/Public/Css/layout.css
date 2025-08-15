@@ -1,0 +1,112 @@
+.aa {
+color: white !important;
+    
+    margin-right: 45px;
+    display: flex;
+}
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center; /* Ensures items are vertically aligned */
+    padding: 0 10px; /* Adds equal padding */
+}
+
+.navbar {
+    height: 56px; /* Keep the navbar at a fixed height */
+    align-items: center; /* Ensures the content inside stays aligned */
+}
+.footer{
+    margin-bottom: 0px;
+    padding-bottom: 0;
+
+}
+.footer{
+    margin: 0;
+    padding: 0;
+}
+.animation{
+    display: flex;
+    animation: slideAnimation 10s linear infinite ;
+
+}
+/* practice */
+.card-img-topss{
+    width: 100px;
+    height: 100px;
+}
+
+ .cart-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+    line-height: 1;
+    transform: translate(50%, -50%);
+    pointer-events: none;
+  }
+
+
+
+@keyframes cartBounceFlash {
+  0% {
+    transform: scale(1);
+    color: inherit;
+  }
+  20% {
+    transform: scale(1.4);
+    color: #ff4d4d; /* bright red */
+  }
+  50% {
+    transform: scale(1.2);
+    color: #ff9900; /* orange */
+  }
+  100% {
+    transform: scale(1);
+    color: inherit;
+  }
+}
+
+.cart-bounce {
+  animation: cartBounceFlash 0.4s ease;
+}
+
+
+
+
+    .payment-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    .form-control {
+      border-radius: 6px;
+    }
+    .payment-header {
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .total-amount {
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #28a745;
+    }
+    .btn-pay {
+      font-size: 1.2rem;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    .card-icons img {
+      width: 45px;
+      margin-right: 8px;
+    }

@@ -1,0 +1,100 @@
+<body>
+  <div class="container py-5">
+    <div class="product-card shadow-sm p-4 rounded bg-white">
+
+      <div class="row">
+        <!-- Images section -->
+        <div class="col-md-6">
+
+          <f:if condition="{product.image}">
+            <div id="productCarousel" class="carousel slide mb-3" data-ride="carousel" data-interval="3000">
+              <div class="carousel-inner rounded border">
+                <f:for each="{product.image}" as="img" iteration="iterator">
+                  <div class="carousel-item {f:if(condition: iterator.isFirst, then: 'active')}">
+                    <f:image image="{img}" class="d-block w-100" style="max-height: 500px; object-fit: contain;" />
+                  </div>
+                </f:for>
+              </div>
+
+              <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+
+              <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="d-flex justify-content-start flex-wrap">
+              <f:for each="{product.image}" as="img" iteration="iterator">
+                <f:image image="{img}" width="80" height="80" class="img-thumbnail mr-2 mb-2" alt="{product.name}"
+                  style="cursor:pointer; object-fit: cover; height: 80px; width: 80px;"/>
+              </f:for>
+            </div>
+          </f:if>
+
+        </div>
+
+        <!-- Product details -->
+        <div class="col-md-6">
+          <h2 class="product-title font-weight-bold">{product.name}</h2>
+
+          <!-- Rating -->
+          <div class="mb-3">
+            <span class="text-warning">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+            </span>
+          </div>
+
+          <p class="h4 text-primary font-weight-bold">${product.price}</p>
+
+          <p class="text-secondary">{product.description}</p>
+
+          <!-- Quantity selector -->
+          <div class="d-flex align-items-center mb-4">
+            <label for="quantityInput" class="mr-3 mb-0 font-weight-medium">Quantity:</label>
+            <input type="number" id="quantityInput" class="totalquantity" data-avaliable="{product.avaliable}" min="1" max="{product.avaliable}" value="1" class="form-control"
+              style="max-width: 100px;" />
+            <small class="text-muted ml-3"  >Max available: {product.avaliable}</small>
+          </div>
+          <!-- Add to cart -->
+          <button class="btn btn-success btn-lg px-4" id="cartbutton"  data-product="{product.uid}">
+            <i class="fa fa-shopping-cart mr-2"></i> Add to Cart
+          </button>
+
+          <!-- Tabs for Description and Specs -->
+          <ul class="nav nav-tabs mt-5" id="productTabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="desc-tab" data-toggle="tab" href="#desc" role="tab" aria-controls="desc"
+                aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="spec-tab" data-toggle="tab" href="#spec" role="tab" aria-controls="spec"
+                aria-selected="false">Specifications</a>
+            </li>
+          </ul>
+
+          <div class="tab-content p-3 border border-top-0" id="productTabContent">
+            <div class="tab-pane fade show active" id="desc" role="tabpanel" aria-labelledby="desc-tab">
+              <p>{product.description}</p>
+            </div>
+            <div class="tab-pane fade" id="spec" role="tabpanel" aria-labelledby="spec-tab">
+              
+              <f:format.raw>{product.specifications}</f:format.raw>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  

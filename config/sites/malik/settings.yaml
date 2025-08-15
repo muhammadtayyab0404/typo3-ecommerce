@@ -1,0 +1,8 @@
+evoweb.sf-register.settings.createPid: 43
+evoweb.sf-register.settings.useEmailAddressAsUsername: true
+evoweb.sf-register.settings.usergroup: 3
+evoweb.sf-register.settings.notifyUser.deleteSave: false
+evoweb.sf-register.settings.notifyUser.deleteConfirm: false
+evoweb.sf-register.settings.notifyUser.deleteSendLink: false
+evoweb.sf-register.settings.notifyUser.resendMail: false
+evoweb.sf-register.settings.confirmEmailPostCreate: false

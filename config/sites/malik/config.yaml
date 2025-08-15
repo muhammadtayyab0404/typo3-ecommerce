@@ -1,0 +1,18 @@
+base: /
+dependencies:
+  - malik/mywebsite
+  - typo3/fluid-styled-content
+  - evoweb/sf-register-maximum
+languages:
+  -
+    title: English
+    enabled: true
+    locale: en-US
+    hreflang: ''
+    base: /
+    websiteTitle: ''
+    navigationTitle: ''
+    flag: global
+    languageId: 0
+rootPageId: 1
+websiteTitle: ''

@@ -1,0 +1,44 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <!-- <img src="logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-top"> -->
+        <f:image src="fileadmin//logo.png"  class="d-inline-block align-top"  width="90" height="auto" alt="aa"></f:image>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="aa navbar-nav ml-auto">
+<f:for each="{mainnavigation}" as="menu">
+    <f:if condition="{menu.title} == 'Cart'">
+        <f:then>
+
+                <li class="nav-item special-item position-relative" style="width: 50px;">
+                <a class="nav-link p-0" href="{menu.link}" style="position: relative; display: inline-block;">
+                    <img src="/fileadmin/images/cart.png" height="40" width="50" alt="{menu.title}">
+                    <span class="cart-badge"  id="livenumber"> </span> <!-- Example count -->
+                </a>
+                </li>
+        </f:then>
+        <f:else>
+            <!-- Normal menu item -->
+            <li class="nav-item {f:if(condition: menu.active, then: 'active flex-sm-fill text-sm-center nav-link active')}">
+                <a class="nav-link" href="{menu.link}">{menu.title}</a>
+              
+            </li>
+        </f:else>
+    </f:if>
+    <f:debug>{frontedUser}</f:debug>
+</f:for>
+
+       
+       
+      </ul>
+
+    </div>
+    
+  </nav>
+
+<f:render section="Main" />
+
+
