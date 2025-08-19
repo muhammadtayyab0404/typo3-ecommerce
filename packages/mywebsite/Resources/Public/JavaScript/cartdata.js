@@ -55,7 +55,6 @@ function interval()
 {
 
    let oldvalue = parseInt(document.getElementById('livenumber').textContent, 10);
-
 setInterval(()=>{
 
   aa=getCart();
@@ -63,7 +62,7 @@ setInterval(()=>{
   let total =0;
   for(let i=0 ;i<aa.length; i++){
     total=total+ parseInt(aa[i].qty, 10) ||0;
-
+ 
   }
 
 
@@ -81,16 +80,19 @@ document.getElementById('livenumber').textContent = total;
   console.log("number is same");
 oldvalue= total;
 
+console.log(currentUserId);
 },1000
 );
 }
+
 
 document.addEventListener('DOMContentLoaded', function(){
   
   interval();
 
 })  
-  
+
+
 
 
 

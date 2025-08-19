@@ -18,6 +18,7 @@
 		"evoweb/sf-register": "^13.2",
 		"georgringer/news": "^12.3",
 		"malik/mywebsite": "@dev",
+		"sjbr/static-info-tables": "*",
 		"typo3/cms-backend": "^13.4",
 		"typo3/cms-belog": "^13.4",
 		"typo3/cms-beuser": "^13.4",

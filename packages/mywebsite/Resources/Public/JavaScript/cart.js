@@ -1,8 +1,14 @@
 
 function Addtocart(productuid, productquant) {
     let cart = getCart(); // load existing cart from cookie
+
+     const userdata = document.getElementById("user-info");
+    const feuserId = userdata ? parseInt(userdata.getAttribute("data-feuser"), 10) : 0; 
+
     const existingItem = cart.find(item => item.uid === productuid);
 
+
+    
     // Find if product already exists in the cart
     if(existingItem){
 
@@ -21,7 +27,7 @@ function Addtocart(productuid, productquant) {
 
   const cartitem = {
    uid: productuid,
-   qty: productquant
+   qty: productquant,
  };
 
 
@@ -40,7 +46,7 @@ function getCart() {
   function dataupload(data){
     
   const cartdata = JSON.stringify(data);
-  document.cookie='cart=' + cartdata +'; path=/; max-age=604800'; 
+  document.cookie='cart=' + cartdata + '; path=/; max-age=604800'; 
 
    }  
 

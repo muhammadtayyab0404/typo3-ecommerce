@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "05ac4eb3523bc98e69a470606b0f89fc",
+    "content-hash": "91cf2a4f536a484d8ace9b14486ce4e2",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1682,16 +1682,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "5.6.2",
+            "version": "5.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "92dde6a5919e34835c506ac8c523ef095a95ed62"
+                "reference": "94f8051919d1b0369a6bcc7931d679a511c03fe9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/92dde6a5919e34835c506ac8c523ef095a95ed62",
-                "reference": "92dde6a5919e34835c506ac8c523ef095a95ed62",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/94f8051919d1b0369a6bcc7931d679a511c03fe9",
+                "reference": "94f8051919d1b0369a6bcc7931d679a511c03fe9",
                 "shasum": ""
             },
             "require": {
@@ -1740,9 +1740,9 @@
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
             "support": {
                 "issues": "https://github.com/phpDocumentor/ReflectionDocBlock/issues",
-                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.6.2"
+                "source": "https://github.com/phpDocumentor/ReflectionDocBlock/tree/5.6.3"
             },
-            "time": "2025-04-13T19:20:35+00:00"
+            "time": "2025-08-01T19:43:32+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -2415,6 +2415,69 @@
                 "source": "https://github.com/ralouphie/getallheaders/tree/develop"
             },
             "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "sjbr/static-info-tables",
+            "version": "v13.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://codeberg.org/sjbr/static-info-tables",
+                "reference": "1960205acf0caa11c02ff5a048a9f920e988f08a"
+            },
+            "require": {
+                "typo3/cms-backend": "^13.4",
+                "typo3/cms-core": "^13.4",
+                "typo3/cms-extbase": "^13.4",
+                "typo3/cms-extensionmanager": "^13.4",
+                "typo3/cms-fluid": "^13.4",
+                "typo3/cms-frontend": "^13.4"
+            },
+            "replace": {
+                "typo3-ter/static-info-tables": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "static_info_tables"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SJBR\\StaticInfoTables\\": "Classes/"
+                },
+                "exclude-from-classmap": [
+                    "Classes/Domain/Model/Country",
+                    "Classes/Domain/Model/CountryZone",
+                    "Classes/Domain/Model/Currency",
+                    "Classes/Domain/Model/Language",
+                    "Classes/Domain/Model/Territory"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Stanislas Rolland",
+                    "homepage": "https://www.sjbr.ca",
+                    "role": "Developer"
+                },
+                {
+                    "name": "René Fritz",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Data and API for countries, languages and currencies for use in TYPO3 CMS.",
+            "homepage": "https://codeberg.org/sjbr/static-info-tables",
+            "keywords": [
+                "Static Info Tables",
+                "typo3"
+            ],
+            "support": {
+                "issues": "https://codeberg.org/sjbr/static-info-tables/issues"
+            },
+            "time": "2025-06-23T05:04:01+00:00"
         },
         {
             "name": "symfony/cache",

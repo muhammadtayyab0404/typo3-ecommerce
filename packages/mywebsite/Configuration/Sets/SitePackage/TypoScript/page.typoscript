@@ -12,20 +12,10 @@ page {
             0 = EXT:mywebsite/Resources/Private/PageView/
             1 = {$page.pageview.paths}
         }
-
-
         variables {
-            frontedUser =TEXT
-            frontedUser.data = TSFE:fe_user|user|uid
-
-            frontedemail =TEXT
-            frontedemail.data= TSFE:fe_user|user|email 
-
+            frontedUser = TEXT
+            frontedUser.data = TSFE:fe_user|user|email
         }
-
-
-    
-
         dataProcessing {
             10 = files
             10 {
@@ -122,6 +112,7 @@ page {
         mywebsite_scripts = EXT:mywebsite/Resources/Public/JavaScript/main.js
          cart_detail=EXT:mywebsite/Resources/Public/JavaScript/cart.js
          cart_deta=EXT:mywebsite/Resources/Public/JavaScript/cartdata.js
+         proceed_js=EXT:mywebsite/Resources/Public/JavaScript/proceed.js
     }
 
 }

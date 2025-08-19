@@ -54,11 +54,11 @@
         <div class="total-row fs-4 fw-semibold mb-3">
           Total Price: <span class="text-primary">${totalprice}</span>
         </div>
-        <f:link.page pageUid="40" pluginName="Payment" action="pay">
-        <button class="btn btn-success btn-lg w-100">
+        
+        <button data-checkout="{f:uri.action(pageUid:40)}" id="theend" class="btn btn-success btn-lg w-100"  data-back="{f:uri.action(pageUid:43)}"> 
           Proceed to Checkout
         </button>
-        </f:link.page>
+        
       </div>
 
     </div>

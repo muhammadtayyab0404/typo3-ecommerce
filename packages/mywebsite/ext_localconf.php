@@ -57,12 +57,14 @@ ExtensionUtility::configurePlugin(
   'CartDetail',
   [
    CartdetailController::class=>'cartdetail',
-   ProductsController::class => 'list'
+   ProductsController::class => 'list',
+   PaymentController::class => 'pay',
   ],
 
   [
     CartdetailController::class=>'cartdetail',
-    ProductsController::class => 'list'
+    ProductsController::class => 'list',
+    PaymentController::class => 'pay',
   ],
 
   ExtensionUtility::configurePlugin(
@@ -70,9 +72,11 @@ ExtensionUtility::configurePlugin(
     'Payment',
     [
       PaymentController::class => 'pay',
+      CartdetailController::class => 'cartdetail'
     ],
     [
     PaymentController::class=>'pay',
+    CartdetailController::class => 'cartdetail'
     ],
   )
 
