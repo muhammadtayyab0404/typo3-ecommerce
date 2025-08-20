@@ -39,14 +39,14 @@ function getCart() {
     const cartCookie = cookies.find(c => c.startsWith("cart="));
 
     if (cartCookie) {  
-     return JSON.parse(cartCookie.substring(5));    
+     return JSON.parse(decodeURIComponent(cartCookie.substring(5)));    
     }else
     return [];
 }
   function dataupload(data){
     
   const cartdata = JSON.stringify(data);
-  document.cookie='cart=' + cartdata + '; path=/; max-age=604800'; 
+  document.cookie='cart=' + encodeURIComponent(cartdata) + '; path=/; max-age=604800'; 
 
    }  
 

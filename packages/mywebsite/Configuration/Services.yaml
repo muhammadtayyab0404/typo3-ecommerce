@@ -7,3 +7,16 @@ services:
   Malik\Mywebsite\:
     resource: '../Classes/*'
     exclude: '../Classes/Domain/Model/*'
+
+
+  Malik\Mywebsite\EventListener\Userlogoutlistener:
+    tags:
+      name: event.listener
+      identifier: 'my-user-logout-listener'
+      event: TYPO3\CMS\FrontendLogin\Event\LogoutConfirmedEvent
+
+  Malik\Mywebsite\EventListener\Userloginlistner:
+    tags:
+      name: event.listener
+      identifier: 'my-user-login-listner'
+      event: TYPO3\CMS\FrontendLogin\Event;
