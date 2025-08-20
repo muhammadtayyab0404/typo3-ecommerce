@@ -1,4 +1,5 @@
 <?php
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 use GeorgRinger\News\Controller\NewsController;
 
@@ -7,6 +8,7 @@ use Malik\Mywebsite\Controller\ProductsController;
 use Malik\Mywebsite\Controller\DetailController;
 use Malik\Mywebsite\Controller\CartdetailController;
 use Malik\Mywebsite\Controller\PaymentController;
+use TYPO3\CMS\Extensionmanager\Service\ExtensionManagementService;
 
 
 
@@ -66,7 +68,7 @@ ExtensionUtility::configurePlugin(
     ProductsController::class => 'list',
     PaymentController::class => 'pay',
   ],
-
+);
   ExtensionUtility::configurePlugin(
     'myWebsite',
     'Payment',
@@ -78,6 +80,4 @@ ExtensionUtility::configurePlugin(
     PaymentController::class=>'pay',
     CartdetailController::class => 'cartdetail'
     ],
-  )
-
-);   
+  );

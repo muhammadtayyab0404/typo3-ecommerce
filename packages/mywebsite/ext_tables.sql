@@ -35,7 +35,7 @@ CREATE TABLE tx_mywebsite_domain_model_products(
     comments varchar(255),
     link varchar(255),
     PRIMARY KEY (uid),
-    
-
-
+); 
+CREATE TABLE fe_users (
+  shop VARCHAR(255),
 );
