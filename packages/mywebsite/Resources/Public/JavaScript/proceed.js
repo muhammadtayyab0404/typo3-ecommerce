@@ -28,3 +28,28 @@ function feuserdata(){
      }
     
 }
+
+function towardsproduct(){
+tt= document.getElementById("user-info");
+abcd=tt.dataset.towardsproducts;
+setTimeout(() => {
+window.location.href =abcd; // replace with your page URL
+}, 1500);
+}
+
+
+document.addEventListener('DOMContentLoaded', function(){
+const logouttt =document.getElementById('loggin');
+ coo = feuserdata();
+
+ if(typeof coo === 'undefined'){
+  logouttt.textContent="Login";
+  logouttt.classList.add("login-style");
+  logouttt.classList.remove("logout-style");
+ }
+ else{
+  logouttt.textContent="Logout";
+  logouttt.classList.add("logout-style");
+  logouttt.classList.remove("login-style");
+ }
+})

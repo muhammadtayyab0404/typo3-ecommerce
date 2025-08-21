@@ -26,3 +26,33 @@ body {
     }
 
 
+a.nav-link.login-style {
+    color: green !important;
+    font-weight: bold !important;
+}
+
+a.nav-link.logout-style {
+    color: red !important;
+    font-weight: bold !important;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.f-section {
+    flex: 1; /* make main content grow */
+}
+
+.footer {
+    margin-top: auto; /* push footer to bottom */
+    padding: 0;       /* remove extra padding */
+}
+

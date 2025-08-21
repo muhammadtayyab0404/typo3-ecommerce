@@ -21,11 +21,19 @@
                 </li>
         </f:then>
         <f:else>
+            <f:if  condition="{menu.title} == 'Login'">
+                <f:then>
+                <li class="nav-item {f:if(condition: menu.active, then: 'active flex-sm-fill text-sm-center nav-link active')}">
+                <a class="nav-link" id="loggin" href="{menu.link}"></a>
+                </f:then>
+                <f:else>
             <!-- Normal menu item -->
             <li class="nav-item {f:if(condition: menu.active, then: 'active flex-sm-fill text-sm-center nav-link active')}">
                 <a class="nav-link" href="{menu.link}">{menu.title}</a>
               
             </li>
+            </f:else>
+        </f:if>
         </f:else>
     </f:if>
     

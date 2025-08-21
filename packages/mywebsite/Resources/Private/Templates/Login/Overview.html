@@ -1,20 +1,24 @@
+
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <f:if condition="{showLoginMessage}">
-    <h3 id="user-info" data-feuser="{user.uid}">
+    <h3 id="user-info"  data-feuser="{user.uid}">
         <f:render partial="RenderLabelOrMessage" arguments="{key: 'success_header'}"/>
     </h3>
 
         <f:if condition="{user}">
         <f:then>
             <script>
-
               document.cookie = "feuser={user.uid}; path=/; max-age=3600";
+                   setTimeout(() => {
+            window.location.href = "{f:uri.page(pageUid:13)}"; // target page
+        }, 3000); 
             </script>
         </f:then>
         <f:else>
             <script>
              document.cookie = "feuser=0;  path=/; max-age=3600";
+             
             </script>
         </f:else>
         </f:if>

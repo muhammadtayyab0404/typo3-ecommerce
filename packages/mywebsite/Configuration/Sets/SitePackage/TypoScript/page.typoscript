@@ -97,6 +97,7 @@ page {
     }
 
     includeJS {
+        aa= EXT:EXT:mywebsite/Resources/Public/JavaScript/first.js
        products_detail_scripts =EXT:mywebsite/Resources/Public/JavaScript/products.js
        
     }
