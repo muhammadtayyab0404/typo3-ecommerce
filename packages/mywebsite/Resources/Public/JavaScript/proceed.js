@@ -1,21 +1,58 @@
-document.addEventListener('DOMContentLoaded',function(){
-const bitton = document.getElementById("theend");
-bitton.addEventListener('click', function(){
+document.addEventListener('DOMContentLoaded', function() {
+  const bitton = document.getElementById("theend");
 
-  aa = feuserdata();
-   if (typeof aa === 'undefined') {
-     alert("User is not logged in.. Login or Register your account ");
-     abc = this.dataset.back;
-     window.location.href=abc;
-    }else{
-    alert("User Logged in " +aa);
+  function bootstrapalert(message, type = "info", buttonHtml = "") {
+  const container = document.getElementById("alert-container");
+  container.innerHTML = `
+    <div class="alert alert-${type} fade show text-center shadow-sm" role="alert" style="padding: 1.5rem; border-radius: 0.75rem;">
+      <div class="mb-3">
+        <strong>${message}</strong>
+      </div>
+      ${buttonHtml}
+    </div>
+  `;
+}
 
-    abc =this.dataset.checkout;
-    window.location.href=abc;
+
+  bitton.addEventListener('click', function() {
+    let aa = feuserdata();
+    let abc = "";
+    let buttonHtml = "";
+      
+    cart=getCart();
+     
+    
+    if (typeof aa === 'undefined') {
+      abc = this.dataset.back;
+      buttonHtml = `
+        <a href="${abc}" class="btn btn-sm btn-primary">
+          Continue
+        </a>
+      `;
+      bootstrapalert("User is not logged in.. Login or Register your account ", "danger", buttonHtml);
+    } 
+    else
+    { 
+      if(cart.length==0)
+      {
+          abc=this.dataset.totheproducts
+          buttonHtml = `
+      <a href="${abc}" class="btn btn-sm btn-primary">
+        Continue
+      </a>
+      `;
+        bootstrapalert("There is no item in the Cart ", "danger", buttonHtml);
+    }else
+      
+      {
+      abc = this.dataset.checkout;
+      window.location.href = abc;
+
     }
+  }
+  });
   
-})
-})
+});
 
 
 function feuserdata(){
@@ -53,3 +90,4 @@ const logouttt =document.getElementById('loggin');
   logouttt.classList.remove("login-style");
  }
 })
+

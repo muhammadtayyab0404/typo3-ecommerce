@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const uuid = this.getAttribute('data-uid');
       
       cart=getCart();
+      
       const existingItem = cart.find(item => item.uid === uuid);
       if(existingItem){
         existingItem.qty = qty;
