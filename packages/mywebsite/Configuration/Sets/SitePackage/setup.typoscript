@@ -98,9 +98,23 @@ plugin.tx_felogin_login{
 	}
  }
 
-
-
 }
+
+plugin.tx_mywebsite_commentsection{
+
+    view{
+	templateRootPaths{
+
+		99 = EXT:mywebsite/Resources/Private/Templates/
+	}
+	partialRootPaths{
+		99= EXT:mywebsite/Resources/Private/Partials/
+	}
+	layoutRootPaths{
+		99= EXT:mywebsite/Resources/Private/Layouts/
+	}
+	}
+ }
 
 lib.renderRecord =RECORDS
 lib.renderRecord {
@@ -136,6 +150,15 @@ lib.producttt {
 		orderBy = sorting
 		where =colPos = 20
 	}
-}
 
+}
+lib.comment = CONTENT
+lib.comment {
+	table= tt_content
+	select{
+		pidInList = this
+		orderBy = sorting
+		where= colPos = 30
+	}
+}	
 

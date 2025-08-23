@@ -10,6 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="aa navbar-nav ml-auto">
 <f:for each="{mainnavigation}" as="menu">
+   
     <f:if condition="{menu.title} == 'Cart'">
         <f:then>
 
@@ -25,6 +26,7 @@
                 <f:then>
                 <li class="nav-item {f:if(condition: menu.active, then: 'active flex-sm-fill text-sm-center nav-link active')}">
                 <a class="nav-link" id="loggin" href="{menu.link}"></a>
+                
                 </f:then>
                 <f:else>
             <!-- Normal menu item -->

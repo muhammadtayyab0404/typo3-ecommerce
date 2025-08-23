@@ -129,6 +129,12 @@ ExtensionUtility::registerPlugin(
     'Payment Detail'
 
 );
+ExtensionUtility::registerPlugin(
+    'Mywebsite',
+    'Commentsection',
+    'Comment Section '
+
+);
 
 
 
@@ -145,7 +151,8 @@ ExtensionUtility::registerPlugin(
 
 
 @$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['mywebsite_payment'];
-
+ 
+@$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['mywebsite_commentsection'];
 
 
 

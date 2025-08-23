@@ -39,3 +39,14 @@ CREATE TABLE tx_mywebsite_domain_model_products(
 CREATE TABLE fe_users (
   shop VARCHAR(255),
 );
+
+CREATE TABLE tx_mywebsite_domain_model_comment (
+
+
+  prodid INT(11)  NOT NULL,
+  userid INT(11)  NOT NULL,
+  rating INT(11)  NOT NULL,
+  crdate INT(11)   NOT NULL,
+
+  comments VARCHAR(255)  NOT NULL,
+);

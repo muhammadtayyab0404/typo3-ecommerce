@@ -8,6 +8,7 @@ use Malik\Mywebsite\Controller\ProductsController;
 use Malik\Mywebsite\Controller\DetailController;
 use Malik\Mywebsite\Controller\CartdetailController;
 use Malik\Mywebsite\Controller\PaymentController;
+use Malik\Mywebsite\Controller\CommentsectionController;
 use TYPO3\CMS\Extensionmanager\Service\ExtensionManagementService;
 
 
@@ -81,3 +82,14 @@ ExtensionUtility::configurePlugin(
     CartdetailController::class => 'cartdetail'
     ],
   );
+ ExtensionUtility::configurePlugin(
+  'myWebsite',
+  'commentsection',
+  [
+    CommentsectionController::class => 'comment',
+  ],
+  [
+    CommentsectionController::class => 'comment',
+  ],
+
+ ); 

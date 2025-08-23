@@ -43,8 +43,14 @@ html, body {
 }
 
 body {
+  
     display: flex;
     flex-direction: column;
+}
+.extbase-debugger {
+  flex: 0 0 auto;       /* don’t stretch/shrink */
+  align-self: stretch;  /* span full width */
+  display: block !important; /* override flex behavior */
 }
 
 .f-section {
