@@ -113,3 +113,66 @@ color: white !important;
 
 
 
+/* Section Styling */
+.comments-section {
+  background-color: #f9fafb;
+  padding: 60px 20px;
+}
+
+.comments-header h2 {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.comments-header .subtitle {
+  color: #777;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+/* Comment Card */
+.comment-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.comment-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Header */
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: #222;
+}
+
+.comment-date {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Body */
+.comment-body p {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Footer */
+.comment-footer {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}

@@ -98,6 +98,7 @@ plugin.tx_felogin_login{
 	}
  }
 
+
 }
 
 plugin.tx_mywebsite_commentsection{
@@ -114,6 +115,9 @@ plugin.tx_mywebsite_commentsection{
 		99= EXT:mywebsite/Resources/Private/Layouts/
 	}
 	}
+  persistence{
+   storagePid = 47
+ }
  }
 
 lib.renderRecord =RECORDS

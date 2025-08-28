@@ -1,1 +1,32 @@
+<section class="comments-section">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="comments-header text-center">
+      <h2>What Our Customers Say</h2>
+      <p class="subtitle">Real reviews from our happy shoppers</p>
+    </div>
+<f:debug>{record}</f:debug>
+    <f:for each="{record}" as="comment">
+    <!-- Comment Card 1 -->
+    <div class="comment-card">
+      <div class="comment-header">
+        <h5 class="comment-author">Sarah Khan</h5>
+        <span class="comment-date">March 20, 2025</span>
+      </div>
+      <div class="comment-body">
+        <p>
+          The shopping experience was smooth, and the checkout process was super fast. 
+          I loved the detailed product descriptions and secure payment options.
+        </p>
+      </div>
+      <div class="comment-footer">
+        <span class="badge bg-success">Verified Purchase</span>
+        <i class="fas fa-heart ms-2 text-danger"></i>
+      </div>
+    </div>
+</f:for>
 
+
+
+  </div>
+</section>

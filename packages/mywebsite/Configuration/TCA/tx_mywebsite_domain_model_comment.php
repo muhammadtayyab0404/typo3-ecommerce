@@ -2,7 +2,7 @@
 return[
  'ctrl'=>[
     'title'=> 'Comments of the record',
-    'label '=> 'Comments of the record',
+    'label'=> 'Comments of the record',
     'security' => [
             'ignorePageTypeRestriction' => true,
         ],
@@ -18,21 +18,21 @@ return[
     'columns'=>[
         
         'prodid'=>[
-        'label'=>'Name of the product',
+        'label'=>'Product Id',
         'exclude' =>0,
         'config'=>[
         'type' =>'none',
            ],
         ],
         'userid'=>[
-        'label'=>'Name of the product',
+        'label'=>'User Id',
         'exclude' =>0,
         'config'=>[
         'type' =>'none',
            ],
         ],
         'rating'=>[
-        'label'=>'Name of the product',
+        'label'=>'Enter the Rating',
         'exclude' =>0,
         'config'=>[
         'type' =>'input',
