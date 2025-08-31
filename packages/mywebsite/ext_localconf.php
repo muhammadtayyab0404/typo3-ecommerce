@@ -86,10 +86,10 @@ ExtensionUtility::configurePlugin(
   'myWebsite',
   'commentsection',
   [
-    CommentsectionController::class => 'comment',
+    CommentsectionController::class => 'comment , create'
   ],
   [
-    CommentsectionController::class => 'comment',
+    CommentsectionController::class => 'comment , create'
   ],
 
  ); 

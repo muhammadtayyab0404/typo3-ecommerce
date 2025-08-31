@@ -5,6 +5,9 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 class Comment extends AbstractEntity{
 
+  /**
+ * @var int
+ */
    protected  $prodid=0;
   protected $userid =0;
   protected $rating =0;

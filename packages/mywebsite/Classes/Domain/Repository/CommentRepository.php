@@ -7,6 +7,8 @@ class CommentRepository extends Repository{
  
     public function initializeObject(){
     $query = $this->createQuery()->getQuerySettings();
+
+    
     $query ->setRespectStoragePage(false);
     $this->setDefaultQuerySettings($query);
     }   

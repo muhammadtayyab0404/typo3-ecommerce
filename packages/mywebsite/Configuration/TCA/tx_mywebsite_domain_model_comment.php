@@ -21,14 +21,14 @@ return[
         'label'=>'Product Id',
         'exclude' =>0,
         'config'=>[
-        'type' =>'none',
+        'type' =>'input',
            ],
         ],
         'userid'=>[
         'label'=>'User Id',
         'exclude' =>0,
         'config'=>[
-        'type' =>'none',
+        'type' =>'input',
            ],
         ],
         'rating'=>[
@@ -45,7 +45,7 @@ return[
         'type' =>'input',
            ],
         ],
-        'crdate' => [
+    'crdate' => [
     'exclude' => 1,
     'label' => 'Creation date',
     'config' => [

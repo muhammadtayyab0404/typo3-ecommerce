@@ -115,9 +115,6 @@ plugin.tx_mywebsite_commentsection{
 		99= EXT:mywebsite/Resources/Private/Layouts/
 	}
 	}
-  persistence{
-   storagePid = 47
- }
  }
 
 lib.renderRecord =RECORDS
