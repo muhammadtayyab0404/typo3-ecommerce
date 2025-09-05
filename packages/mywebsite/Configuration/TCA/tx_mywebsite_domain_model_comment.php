@@ -3,8 +3,9 @@ return[
  'ctrl'=>[
     'title'=> 'Comments of the record',
     'label'=> 'Comments of the record',
+    'crdate'=> 'crdate',
     'security' => [
-            'ignorePageTypeRestriction' => true,
+    'ignorePageTypeRestriction' => true,
         ],
 
     ],
@@ -45,16 +46,7 @@ return[
         'type' =>'input',
            ],
         ],
-    'crdate' => [
-    'exclude' => 1,
-    'label' => 'Creation date',
-    'config' => [
-        'type' => 'none',
-        'renderType' => 'inputDateTime',
-        'format' => 'datetime',
-        
-    ],
-],
+
 
 
     ]

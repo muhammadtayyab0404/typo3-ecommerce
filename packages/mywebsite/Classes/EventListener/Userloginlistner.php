@@ -27,7 +27,7 @@ class Userloginlistner{
 
      )->fetchAssociative();
      if ($row ){
-     $finalcookie=$row['shop'];
+     $finalcookie=$row['shop'] ?? '[]';
      setcookie('cart' , $finalcookie, time() + 60*60*24+0,'/');
      }
      

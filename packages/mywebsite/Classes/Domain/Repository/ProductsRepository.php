@@ -11,4 +11,6 @@ final class ProductsRepository extends Repository
     $query ->setRespectStoragePage(false);
     $this->setDefaultQuerySettings($query);
  }
+
+ 
 }

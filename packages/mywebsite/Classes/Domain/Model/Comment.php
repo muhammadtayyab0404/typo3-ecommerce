@@ -9,6 +9,7 @@ class Comment extends AbstractEntity{
  * @var int
  */
    protected  $prodid=0;
+   
   protected $userid =0;
   protected $rating =0;
    protected string $comments='';
@@ -20,7 +21,7 @@ class Comment extends AbstractEntity{
 
 
    public function getProdid(){
-    return $this->prodid;
+    return (int) $this->prodid;
    }
    public function setProdid(int $prodid){
     $this->prodid=$prodid;

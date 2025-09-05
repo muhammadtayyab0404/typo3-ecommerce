@@ -5,49 +5,59 @@
       <h2>What Our Customers Say</h2>
       <p class="subtitle">Real reviews from our happy shoppers</p>
     </div>
-
-
+ 
+<f:security.ifAuthenticated>
+   <f:then>
     <!-- Comment Form -->
     <div class="comment-form mt-5">
       <h4 class="mb-3">Leave a Comment</h4>
-      
+     
       <f:form action="create" 
         controller="Commentsection" 
         object="{newcomment}" 
         objectName="def"
+        pluginName="commentsection"
         
         class="comment-form-box">
-
         <div class="mb-3">
           <label for="message" class="form-label">Your Comment</label>
           <f:form.textarea property="comments" id="message" rows="4" class="form-control" required="true" />
         </div>
 
-        <f:form.hidden  property="prodid"  value="{productid}" />
+        <f:form.hidden  property="prodid"  value="{productId}" />
+        <f:form.hidden property="userid" value="{userId}"/>
 
         <div class="mb-3">
           <f:form.submit value="Post Comment" class="btn btn-primary" />
         </div>
       </f:form>
+     
     </div>
 
+      </f:then>
+</f:security.ifAuthenticated>
+
     <!-- Existing Comments -->
-    <f:for each="{record}" as="comment">
+    <f:for each="{commentsWithUser}" as="comment">
+      
       <div class="comment-card">
         <div class="comment-header">
-          <h5 class="comment-author">{comment.name}name</h5>
+          <h5 class="comment-author">{comment.firstName}</h5>
           <span class="comment-date">
-            <f:format.date format="F d, Y">{comment.crdate}</f:format.date>
+            <f:format.date format="F d, Y">{comment.comment.crdate}</f:format.date>
           </span>
         </div>
         <div class="comment-body">
-          <p>{comment.comments}</p>
+          <p>{comment.comment.comments}</p>
         </div>
         <div class="comment-footer">
           <span class="badge bg-success">Verified Purchase</span>
         </div>
       </div>
+
     </f:for>
 
   </div>
+
+
 </section>

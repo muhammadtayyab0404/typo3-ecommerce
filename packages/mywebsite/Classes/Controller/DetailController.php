@@ -18,13 +18,22 @@ class DetailController extends ActionController{
 public function listAction(){
 
       $productIdd = $this->request->getQueryParams();
-      $productId= $productIdd['Products'] ?? null;
+      $productId= (int)($productIdd['Products'] ?? 0);
 
+    
 
+      if($productId===0){
+        return $this->htmlResponse();
+      }
+      else{
+        
+        
       $product = $this->productsRepository->findByUid($productId);
     
     $this->view->assign("product",$product);
+    $this->view->assign("abc",$productId);
     return $this->htmlResponse();
+     }
    
 }
 
