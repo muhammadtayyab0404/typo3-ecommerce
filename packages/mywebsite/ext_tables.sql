@@ -29,7 +29,7 @@ CREATE TABLE tx_mywebsite_domain_model_products(
     price INT(11),
     image VARCHAR(255),
     description VARCHAR(255),
-    specifications VARCHAR(255),
+    specifications text,
     category  varchar(255),
     Avaliable INT(255),
     comments varchar(255),

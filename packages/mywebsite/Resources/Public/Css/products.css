@@ -62,3 +62,40 @@ body {
     padding: 0;       /* remove extra padding */
 }
 
+/* Push the collapsed navbar menu below the dark navbar */
+@media (max-width: 991.98px) {  /* Only affects mobile/tablet */
+  .navbar-collapse {
+    background-color: #343a40; /* same as .bg-dark */
+    position: absolute;
+    top: 56px;   /* default Bootstrap navbar height */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+/* Put this in your site CSS */
+/* Desktop/laptop: keep the person fully visible */
+.hero-banner{
+  background-image: url('/fileadmin/images/banner01.png');
+  background-repeat: no-repeat;
+  background-size: auto 100%;       /* scale to hero height → no vertical crop */
+  background-position: right center;/* pin subject to the right */
+  background-color: #F6EFD7;        /* light fallback color for the left side */
+  min-height: clamp(380px, 60vh, 620px);
+  display: grid;
+  place-items: center;
+  padding-block: 3rem;
+}
+
+/* Phones/tablets: let it fill the screen nicely */
+@media (max-width: 767.98px){
+  .hero-banner{
+    background-size: cover;         /* fill small screens */
+    background-position: center top;/* keep face visible on mobile */
+    min-height: 70vh;
+  }
+}
+
