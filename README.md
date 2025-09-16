@@ -7,6 +7,13 @@ Get going quickly with TYPO3 CMS.
 * PHP 8.2
 * [Composer](https://getcomposer.org/download/)
 
+## Screenshots
+<img width="1915" height="963" alt="Image" src="https://github.com/user-attachments/assets/e3ed1427-d527-4aa0-b54b-043517ef9ea0" />
+<img width="1915" height="963" alt="Image" src="https://github.com/user-attachments/assets/f32c20d4-2b0b-48dc-8025-05e99ce18a31" />
+<img width="1915" height="963" alt="Image" src="https://github.com/user-attachments/assets/ad9b8284-425c-4cc7-81a6-51ccb7a2827a" />
+<img width="1915" height="963" alt="Image" src="https://github.com/user-attachments/assets/e8b1ef0c-e48c-4bcc-aeed-583ea0af3c2a" />
+
+
 ## Quickstart
 
 * `composer create-project typo3/cms-base-distribution project-name ^13`
